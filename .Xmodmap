@@ -1,0 +1,2 @@
+xmodmap -e "keycode 94 = Shift_L"
+xmodmap -e "keycode 107 = Menu"
