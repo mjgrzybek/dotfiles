@@ -8,6 +8,8 @@
 # for ssh logins, install and configure the libpam-umask package.
 #umask 022
 
+logger ".profile loaded"
+
 # if running bash
 if [ -n "$BASH_VERSION" ]; then
     # include .bashrc if it exists
@@ -28,11 +30,3 @@ fi
 eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
 _byobu_sourced=1 . /home/linuxbrew/.linuxbrew/Cellar/byobu/5.127/bin/byobu-launch 2>/dev/null || true
 
-XMODMAP_CONF="$HOME/.Xmodmap"
-logger Trying to apply $XMODMAP_CONF
-if [ -f $XMODMAP_CONF ]; then
-	. $XMODMAP_CONF
-	logger $XMODMAP_CONF result: $?
-else
-	logger $XMODMAP_CONF not found
-fi
