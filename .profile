@@ -27,7 +27,15 @@ fi
 if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
-eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
+#eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
+export HOMEBREW_PREFIX="/home/linuxbrew/.linuxbrew"
+export HOMEBREW_CELLAR="/home/linuxbrew/.linuxbrew/Cellar"
+export HOMEBREW_REPOSITORY="/home/linuxbrew/.linuxbrew/Homebrew"
+export PATH="$PATH:/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin"
+export MANPATH="$MANPATH:/home/linuxbrew/.linuxbrew/share/man"
+export INFOPATH="$INFOPATH:/home/linuxbrew/.linuxbrew/share/info"
+
+
 _byobu_sourced=1 . /home/linuxbrew/.linuxbrew/Cellar/byobu/5.127/bin/byobu-launch 2>/dev/null || true
 
-export PATH=$PATH:/home/linuxbrew/.linuxbrew/opt/go/libexec/bin
+export PATH=/home/linuxbrew/.linuxbrew/opt/go/libexec/bin:$PATH
