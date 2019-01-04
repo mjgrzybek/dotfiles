@@ -64,6 +64,8 @@ ZSH_THEME="robbyrussell"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git
+  kubectl
+  minikube
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -99,4 +101,3 @@ source $ZSH/oh-my-zsh.sh
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 fpath=(/home/linuxbrew/.linuxbrew/share/zsh-completions $fpath)
-source /home/linuxbrew/.linuxbrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh

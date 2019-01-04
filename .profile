@@ -30,3 +30,4 @@ fi
 eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
 _byobu_sourced=1 . /home/linuxbrew/.linuxbrew/Cellar/byobu/5.127/bin/byobu-launch 2>/dev/null || true
 
+export PATH=$PATH:/home/linuxbrew/.linuxbrew/opt/go/libexec/bin
